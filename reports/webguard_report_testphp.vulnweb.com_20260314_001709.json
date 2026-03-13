@@ -1,0 +1,22 @@
+{
+    "target": "http://testphp.vulnweb.com/",
+    "scan_date": "2026-03-14T00:17:09.640389",
+    "reconnaissance": {
+        "domain": "testphp.vulnweb.com",
+        "ip_address": "44.228.249.3",
+        "server_banner": null,
+        "technologies": [],
+        "dns_records": {
+            "A": [
+                "44.228.249.3"
+            ],
+            "MX": [],
+            "TXT": [
+                "\"google-site-verification:toEctYsulNIxgraKk7H3z58PCyz2IOCc36pIupEPmYQ\""
+            ],
+            "NS": []
+        },
+        "open_ports": []
+    },
+    "vulnerabilities": []
+}

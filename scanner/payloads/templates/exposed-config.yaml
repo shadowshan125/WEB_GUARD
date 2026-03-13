@@ -1,0 +1,24 @@
+id: exposed-config
+info:
+  name: Exposed Configuration File
+  author: WebGuard
+  severity: high
+  description: An exposed configuration file was found on the web server.
+  remediation: Restrict access to configuration files or move them out of the web root.
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/.env"
+      - "{{BaseURL}}/config.php.bak"
+      - "{{BaseURL}}/web.config.bak"
+    matchers:
+      - type: status
+        status:
+          - 200
+      - type: word
+        words:
+          - "DB_PASSWORD"
+          - "<?php"
+          - "<configuration>"
+        part: body
+        condition: or

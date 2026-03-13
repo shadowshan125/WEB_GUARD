@@ -1,0 +1,7 @@
+django>=5.0
+requests
+aiohttp
+beautifulsoup4
+colorama
+dnspython
+pyyaml
